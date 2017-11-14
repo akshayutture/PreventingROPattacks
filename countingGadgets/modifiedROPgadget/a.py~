@@ -1,0 +1,23 @@
+import sys
+import re
+
+gadgetListFile = "a.gadgets"
+gadgetList = []
+
+with open(gadgetListFile,"r") as f:
+    lines = f.readlines()
+
+for i in range(len(lines)): 
+	if i!=0:
+		x = lines[i]
+		#Remove white spaces and non ascii characters
+		re.sub(r'[^\x00-\x7F]+','', x)
+		x = ''.join([i if ord(i) < 128 else '' for i in x])
+		x = ''.join(x.split())
+		gadgetList.append(x)
+
+for i in gadgetList:
+	if ("retf" in i) or ("ret 0x" in i) or ("fimul" in i):
+		a = 3
+	else:
+		print i

